@@ -72,7 +72,7 @@ void nm_printf (const c8* fmt, ...)
     }
 
     nm_va_end(vargs);
-    nm_print(buffer);
+    WriteConsoleA(s_stdout_handle, buffer, nm_cstr_len(buffer), nm_nullptr, nm_nullptr);
 }
 
 #endif // NM_PLATFORM_WINDOWS

@@ -30,7 +30,7 @@ void nm_i64_to_cstr (c8* dest, i64 num)
 
     while (num > 0)
     {
-        dest[ndigit-1] = num%10 + '0';
+        dest[ndigit-1] = num%10 + 0x30;
         num /= 10;
         ndigit --;
     }
