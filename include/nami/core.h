@@ -60,6 +60,8 @@ NM_STATIC_ASSERT(sizeof(c8)  == 1, "c8 expected to be 1 byte(s)");
 NM_STATIC_ASSERT(sizeof(f32) == 4, "f32 expected to be 4 byte(s)");
 NM_STATIC_ASSERT(sizeof(f64) == 8, "f64 expected to be 8 byte(s)");
 
+u64 nm_i64_count (i64 val);
+
 #if defined(__cplusplus)
 }
 #endif // __cplusplus
