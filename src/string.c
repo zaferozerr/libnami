@@ -42,3 +42,8 @@ void nm_cstr_copy (c8* dest, const c8* src)
 {
     nm_mem_copy(dest, src, nm_cstr_len(src));
 }
+
+c8* nm_cstr_append (c8* dest, const c8* src)
+{
+    //TODO: implement cstr_append
+}
