@@ -8,6 +8,9 @@ set (NAMI_SRC
     "src/memory.c"
     "src/math.c"
     "src/numerics.c"
+
+    "src/posix_io.c"
+
     "src/win64_io.c")
 
 add_library                (nami STATIC ${NAMI_SRC})

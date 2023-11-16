@@ -11,11 +11,11 @@ extern "C" {
 #   define NM_PLATFORM_WINDOWS
 #elif defined(__linux__)
 #   define NM_PLATFORM_LINUX
-#   define NM_PLATFORM_UNIX
+#   define NM_PLATFORM_POSIX
 #elif defined(__APPLE__)
 #   include <TargetConditionals.h>
 #   define NM_PLATFORM_APPLE
-#   define NM_PLATFORM_UNIX 
+#   define NM_PLATFORM_POSIX
 #endif
 
 #if defined(__aarch64__)
