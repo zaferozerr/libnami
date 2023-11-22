@@ -8,20 +8,19 @@ extern "C" {
 #endif // __cplusplus
 
 #if defined(_WIN64)
-#   define NM_PLATFORM_WINDOWS
+#   define NM_PLATFORM_WINDOWS 1
 #elif defined(__linux__)
-#   define NM_PLATFORM_LINUX
-#   define NM_PLATFORM_POSIX
+#   define NM_PLATFORM_LINUX 1
+#   define NM_PLATFORM_POSIX 1
 #elif defined(__APPLE__)
-#   include <TargetConditionals.h>
-#   define NM_PLATFORM_APPLE
-#   define NM_PLATFORM_POSIX
+#   define NM_PLATFORM_DARWIN 1
+#   define NM_PLATFORM_POSIX  1
 #endif
 
 #if defined(__aarch64__)
-#   define NM_ARCH_ARM64
+#   define NM_ARCH_ARM64 1
 #elif defined(__amd64__)
-#   define NM_ARCH_X64
+#   define NM_ARCH_X64 1
 #endif
 
 #define NM_STATIC_ASSERT(expr, msg) _Static_assert(expr, msg)
@@ -60,6 +59,7 @@ NM_STATIC_ASSERT(sizeof(c8)  == 1, "c8 expected to be 1 byte(s)");
 NM_STATIC_ASSERT(sizeof(f32) == 4, "f32 expected to be 4 byte(s)");
 NM_STATIC_ASSERT(sizeof(f64) == 8, "f64 expected to be 8 byte(s)");
 
+// Returns the digit count of a signed 64bit integer value.
 u64 nm_i64_count (i64 val);
 
 #if defined(__cplusplus)

@@ -3,7 +3,7 @@
 
 u64 nm_i64_count (i64 val)
 {
-    val = nm_math_abs(val);
+    val = nm_math_abs (val);
     u64 ndigit = 0x0;
 
     while (val > 0)
