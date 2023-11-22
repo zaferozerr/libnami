@@ -20,7 +20,7 @@ void nm_mem_set (void* dest, c8 val, u64 size);
 // Allocates a memory region on the heap.
 void* nm_heap_alloc (u64 size);
 
-// Resizes a previously heap allocated memory region;
+// Resizes a previously heap allocated memory region.
 void* nm_heap_resize (void* ptr, u64 size);
 
 // Frees a previously heap allocated memory region.

@@ -4,8 +4,6 @@
 #include <unistd.h>
 #include <sys/mman.h>
 
-#include <nami/io.h>
-
 #define MEM_HEADER_SIZE (sizeof(u64))
 
 void* nm_heap_alloc (u64 size)
@@ -36,12 +34,6 @@ void* nm_heap_resize (void* ptr, u64 size)
         {
             nm_mem_copy (new_ptr + MEM_HEADER_SIZE, ptr, size);
             munmap (mem_ptr, old_size);
-            nm_printf("old addr: %d, new: %d", mem_ptr, new_ptr);
-        }
-
-        else
-        {
-            nm_print("addr same\n");
         }
 
         return new_ptr + MEM_HEADER_SIZE;

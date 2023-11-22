@@ -5,13 +5,9 @@
 
 i32 nm_main ()
 {
-    c8* msg = nm_heap_alloc (16377);
-
-    //nm_heap_resize (msg, 16378);
-
-    nm_mem_copy (msg, "hello world", 16377);
-    //nm_mem_set (msg, 0x30, 1990);
-
+    c8* msg = nm_heap_alloc (12);
+    
+    nm_mem_copy (msg, "hello world", 11);
     nm_printf ("test: %s (%d)\n", msg, -42);
 
     nm_heap_free (msg);
